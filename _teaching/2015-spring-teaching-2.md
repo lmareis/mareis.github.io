@@ -7,30 +7,113 @@ venue: "Germany"
 date: 2025-01-13
 location: "City, Country"
 ---
-# Zenodo Gallery
-Inspired by the EDS Book website (https://edsbook.org/notebooks/gallery), the following gallery has clickable links with directions to **Talks**, the **Zenodo Website** and a **Git Repository**. <br/>
-<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-    <!-- First clickable image -->
-    <a href="http://localhost:4000/talks/">
-        <img src="/images/stats_screenshot.png" alt="Stats Screenshot" style="max-width: 200px; border: 1px solid #ccc; border-radius: 8px;">
-    </a>
-    <!-- Second clickable image -->
-    <a href="http://localhost:4000/talks/">
-        <img src="/images/mardi_screenshot.png" alt="Stats Screenshot" style="max-width: 200px; border: 1px solid #ccc; border-radius: 8px;">
-    </a>
-</div>
-<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
-    <!-- First clickable image -->
-    <a href="https://zenodo.org/">
-        <img src="/images/zenodo_screenshot.png" alt="Stats Screenshot" style="max-width: 200px; border: 1px solid #ccc; border-radius: 8px;">
-    </a>
-    <!-- Second clickable image -->
-    <a href="https://github.com/OleksandrZadorozhnyiML/StMaRDI/blob/main/notebook_01_alarm_publish.Rmd">
-        <img src="/images/portal_screenshot.png" alt="Stats Screenshot" style="max-width: 200px; border: 1px solid #ccc; border-radius: 8px;">
-    </a>
-</div><br/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery with Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        p {
+            text-align: left; /* Change text alignment to left */
+            max-width: 800px; /* Restrict paragraph width for readability */
+            margin: 0 auto; /* Center the paragraph block */
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* Spacing between gallery items */
+            margin-top: 20px;
+        }
+        .gallery-item {
+            text-align: center;
+            max-width: 200px;
+        }
+        .gallery-item img {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Space between buttons */
+            margin-top: 10px;
+        }
+        .button {
+            padding: 8px 15px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none; /* Remove underline */
+        }
+        .button.git {
+            background-color: #24292e; /* GitHub button color */
+        }
+        .button.zenodo {
+            background-color: #0079d3; /* Zenodo button color */
+        }
+        .button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gallery with Links</h1>
+    <p>Inspired by the EDS Book website (https://edsbook.org/notebooks/gallery), the following gallery has clickable links with directions to <strong>Talks</strong>, the <strong>Zenodo Website</strong>, and a <strong>Git Repository</strong>.</p>
+    <div class="gallery-container">
+        <!-- First Item -->
+        <div class="gallery-item">
+            <a href="http://localhost:4000/talks/">
+                <img src="/images/stats_screenshot.png" alt="Stats Screenshot">
+            </a>
+            <div class="button-container">
+                <a href="https://github.com/example-repo" class="button git">Git</a>
+                <a href="https://zenodo.org/example-link" class="button zenodo">Zenodo</a>
+            </div>
+        </div>
+        <!-- Second Item -->
+        <div class="gallery-item">
+            <a href="http://localhost:4000/talks/">
+                <img src="/images/mardi_screenshot.png" alt="Mardi Screenshot">
+            </a>
+            <div class="button-container">
+                <a href="https://github.com/example-repo" class="button git">Git</a>
+                <a href="https://zenodo.org/example-link" class="button zenodo">Zenodo</a>
+            </div>
+        </div>
+        <!-- Third Item -->
+        <div class="gallery-item">
+            <a href="https://zenodo.org/">
+                <img src="/images/zenodo_screenshot.png" alt="Zenodo Screenshot">
+            </a>
+            <div class="button-container">
+                <a href="https://github.com/example-repo" class="button git">Git</a>
+                <a href="https://zenodo.org/example-link" class="button zenodo">Zenodo</a>
+            </div>
+        </div>
+        <!-- Fourth Item -->
+        <div class="gallery-item">
+            <a href="https://github.com/OleksandrZadorozhnyiML/StMaRDI/blob/main/notebook_01_alarm_publish.Rmd">
+                <img src="/images/portal_screenshot.png" alt="Portal Screenshot">
+            </a>
+            <div class="button-container">
+                <a href="https://github.com/example-repo" class="button git">Git</a>
+                <a href="https://zenodo.org/example-link" class="button zenodo">Zenodo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 # Zenodo Seach
-Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thus implemented a search option generating URL for an appropriate Zenodo search with __javascript__. Select the desired attributed and click the button to open an external Zenodo page.
+Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thus implemented a search option generating URL for an appropriate Zenodo search with __javascript__. Select the desired attributes and click the button to open an external Zenodo page.
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -146,3 +229,5 @@ Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thu
     <script src="{{ '/assets/js/generateURL.js' | relative_url }}"></script>
 </body>
 </html>
+* Maybe, we should add a 'static' vs. 'time series' selection as well.
+* The implemented Zenodo search works by scanning through all descriptions and searching for perfect matches. In particular, it does not relate to the tags. To not have two contradicting search options, I'd suggest to have the Zenodo Tags only for the subject, e.g., pharmaceutical or weather, and write the characterization in plain text in a tabular fashion at the beginning of each Dataset.
