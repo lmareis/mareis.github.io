@@ -160,6 +160,9 @@ Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thu
         .missing-group {
             background-color: #CC97C1;
         }
+        .temporal-group {
+            background-color: #CCE8DB;
+        }
         .filter-group h3 {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -193,7 +196,8 @@ Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thu
             <ul class="city-list">
                 <li><input type="checkbox" id="b1" value="Continuous Data"> Continuous Data</li>
                 <li><input type="checkbox" id="b2" value="Discrete Data"> Discrete Data</li>
-                <li><input type="checkbox" id="b3" value="Binary Data"> Binary Data</li>
+                <li><input type="checkbox" id="b3" value="Mixed Data"> Mixed Data</li>
+                <li><input type="checkbox" id="b4" value="Binary Data"> Binary Data</li>
             </ul>
         </div>
         <div class="filter-group scope-group">
@@ -207,7 +211,8 @@ Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thu
             <h3>Ground Truth</h3>
             <ul class="city-list">
                 <li><input type="checkbox" id="d1" value="Available"> Available</li>
-                <li><input type="checkbox" id="d2" value="Unknown"> Unknown</li>
+                <li><input type="checkbox" id="d2" value="Partial"> Partial</li>
+                <li><input type="checkbox" id="d3" value="Unknown"> Unknown</li>
             </ul>
         </div>
         <div class="filter-group license-group">
@@ -222,6 +227,13 @@ Searching in Zenodo is a logical ‘OR’ and not a logical ‘AND'. We have thu
             <ul class="city-list">
                 <li><input type="checkbox" id="f1" value="Complete Data"> Complete Data</li>
                 <li><input type="checkbox" id="f2" value="Missing Values"> Missing Values</li>
+            </ul>
+        </div>
+	<div class="filter-group temporal-group">
+            <h3>Missing Values</h3>
+            <ul class="city-list">
+                <li><input type="checkbox" id="g1" value="Static"> Static</li>
+                <li><input type="checkbox" id="g2" value="Time Series"> Time Series</li>
             </ul>
         </div>
     </div>
